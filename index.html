@@ -3,13 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snake Game</title>
+    <title>Enhanced Snake Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>  
-    <h1>Snake Game</h1>
-    <canvas id="gameCanvas" width="400" height="400"></canvas>
-    <p>Score: <span id="score">0</span></p>
-    <script src="/app.js"></script>
+<body>
+    <div class="game-container">
+        <h1>🐍 Snake Game</h1>
+        
+        <div class="stats-container">
+            <div class="stat-box">
+                <div class="stat-label">Score</div>
+                <div class="stat-value" id="score">0</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">High Score</div>
+                <div class="stat-value" id="highScore">0</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">Level</div>
+                <div class="stat-value" id="level">1</div>
+            </div>
+        </div>
+
+        <div class="difficulty-selector">
+            <label>
+                <input type="radio" name="difficulty" value="easy" checked>
+                Easy
+            </label>
+            <label>
+                <input type="radio" name="difficulty" value="medium">
+                Medium
+            </label>
+            <label>
+                <input type="radio" name="difficulty" value="hard">
+                Hard
+            </label>
+        </div>
+
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+        <div class="controls">
+            <button id="startBtn">Start Game</button>
+            <button id="pauseBtn">Pause</button>
+            <button id="resetBtn">Reset</button>
+        </div>
+
+        <div class="instructions">
+            Use Arrow Keys or WASD to control the snake. Eat food to grow and score points!
+        </div>
+    </div>
+
+    <div class="game-over-overlay" id="gameOverOverlay">
+        <div class="game-over-content">
+            <h2 style="font-size: 3em; margin-bottom: 20px;">Game Over!</h2>
+            <p style="font-size: 1.5em; margin-bottom: 10px;">Final Score: <span id="finalScore">0</span></p>
+            <p style="font-size: 1.2em; margin-bottom: 30px;">High Score: <span id="finalHighScore">0</span></p>
+            <button onclick="restartGame()" style="font-size: 1.2em; padding: 15px 30px;">Play Again</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
 </body>
 </html>
