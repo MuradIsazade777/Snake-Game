@@ -1,5 +1,5 @@
 ## 🐍 Enhanced Snake Game!
-
+ 
 ## 🎮 About The Game
 
 Snake Game is a simple, fun and easy to learn JavaScript game. The goal is to grow the snake with food and score as many points as possible without touching the walls or its own body.
