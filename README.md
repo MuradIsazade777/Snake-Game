@@ -1,4 +1,4 @@
-## 🐍 Enhanced Snake Game!
+## 🐍 Enhanced Snake Game! 
  
 ## 🎮 About The Game
 
